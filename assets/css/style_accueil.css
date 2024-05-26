@@ -1,0 +1,437 @@
+
+ /* Styles pour l'en-tête */
+header {
+    background-color: #f9f9f9;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Style pour les liens de navigation à gauche */
+.left-links-1 {
+    display: flex;
+    align-items: center;
+}
+
+.left-links-1 img {
+    max-width: 100px;
+}
+
+.left-links-1 a {
+    margin-right: 10px;
+    text-decoration: none;
+    color: #333;
+}
+
+/* Style pour le menu déroulant à droite */
+.user-dropdown {
+    position: relative;
+}
+
+.user-dropdown .user-dropdown-content {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: none;
+}
+
+.user-dropdown:hover .user-dropdown-content {
+    display: block;
+}
+
+.user-dropdown-content a {
+    display: block;
+    padding: 5px 10px;
+    text-decoration: none;
+    color: #333;
+}
+
+.user-dropdown-content a:hover {
+    background-color: #f0f0f0;
+}
+
+
+/* Styles pour la bannière et les diapositives */
+.banner {
+    width: 100%; /* Prendre toute la largeur de l'écran */
+    height: 70vh; /* Prendre toute la hauteur de l'écran */
+    overflow: hidden;
+    position: relative;
+    margin: auto; /* Pour centrer la bannière horizontalement */
+}
+
+.banner-slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    height: 100%; /* Prendre toute la hauteur de la bannière */
+}
+
+.slide {
+    width: 100%;
+    flex: 0 0 auto;
+    text-align: center;
+    position: relative; /* Positionnement relatif pour positionner le texte */
+}
+
+.slide img {
+    width: 100%; /* Prendre toute la largeur de la diapositive */
+    height: 100%; /* Remplir toute la hauteur de la diapositive */
+    object-fit: cover; /* Ajuster l'image pour couvrir toute la diapositive */
+}
+
+.text {
+    position: absolute;
+    top: 50%; /* Centrer verticalement */
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centrer horizontalement et verticalement */
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+/*style de la section 1*/
+h2{
+    text-align: center;
+    color: rgb(30, 42, 53);
+    font-size: 35px;
+}
+
+.site-button {
+    display: flex; /* Utilisation de flexbox pour centrer le contenu */
+    justify-content: center; /* Centrer horizontalement */
+    align-items: center; /* Centrer verticalement */
+    height: 50px; /* Hauteur de la section site-button */
+   
+}
+
+.centered-button {
+    text-align: center; /* Centrer le contenu horizontalement */
+    text-decoration: none;
+}
+
+.btn-primary {
+    background-color: #007bff; /* Couleur de fond du bouton */
+    color: #fff; /* Couleur du texte */
+    transition: background-color 0.3s ease; /* Transition fluide */
+    padding: 10px 20px; /* Espace intérieur du bouton */
+    font-size: 16px; /* Taille du texte */
+}
+
+.btn-primary:hover {
+    background-color: #fd7e14; /* Couleur de fond au survol */
+}
+
+/*style des fils d'actualités*/
+
+.news-feed {
+    display: flex;
+    flex-wrap: wrap; /* Permet aux éléments de passer à la ligne */
+    gap: 20px; /* Espacement entre les actualités */
+}
+
+.news-item {
+    width: calc(33.33% - 20px); /* Calcul de la largeur pour 3 éléments par ligne */
+    display: flex;
+    align-items: center;
+    background-color: #f1bfbf; /* Couleur de fond des actualités */
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 20px; /* Espacement en bas */
+    height: 250px; /* Hauteur de l'image */
+}
+
+.news-item img {
+    width: 200px; /* Largeur de l'image */
+    height: 250px; /* Hauteur de l'image */
+    object-fit: cover;
+    border-radius: 10px 0 0 10px; /* Coins arrondis pour l'image à gauche */
+}
+
+.news-content {
+    flex-grow: 1; /* Ajuste le contenu pour remplir l'espace disponible */
+    padding: 20px;
+}
+
+.news-content h3 {
+    margin: 0 0 10px;
+    font-size: 18px;
+}
+
+.news-content p {
+    margin: 0px;
+}
+
+.read-more {
+    color: #007bff; /* Couleur du lien "Lire la suite" */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.read-more:hover {
+    color: #0056b3; /* Couleur au survol du lien "Lire la suite" */
+}
+
+
+/*style de la section evenement*/
+.upcoming-events {
+    display: flex;
+    justify-content: center; /* Centrer les éléments horizontalement */
+    align-items: flex-start; /* Aligner les éléments en haut */
+    margin-top: 40px; /* Ajuster cet espace selon les besoins */
+    text-decoration: none;
+}
+
+.events-list {
+    width: 50%; /* Largeur de la liste des événements */
+    display: flex;
+    flex-direction: column; /* Afficher les événements en colonne */
+    gap: 20px; /* Espacement entre les événements */
+}
+
+.event-link{
+    text-decoration: none;
+}
+.event-item {
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    height: 150px;
+}
+
+.event-item:hover {
+    transform: translateY(-5px);
+}
+
+.event-thumbnail {
+    width: 50%;
+    height: 100px; /* Hauteur de l'image de l'événement */
+    margin-top: 10px; /* Réduit l'espacement vertical au-dessus de l'image */
+    overflow: hidden;
+}
+
+.event-thumbnail img {
+    width: 25%;
+    height: 50%;
+    object-fit: cover;
+    border-radius: 50%; /* Coins arrondis */
+}
+
+.event-details {
+    padding: 0px;
+    margin: 0;
+}
+
+.main-event {
+    width: 40%; /* Largeur de l'événement principal */
+    margin-left: 20px; /* Espacement entre les événements */
+}
+
+.main-event .event-thumbnail {
+    width: 100%;
+    height: 400px; /* Hauteur de l'image de l'événement principal */
+    border-radius: 50%; /* Coins arrondis */
+    overflow: hidden;
+}
+
+.main-event .event-thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.event-details_1 h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+.event-details h3 {
+    
+    margin-top: -30px;
+}
+.event-details p {
+    
+    margin-bottom: -30px;
+}
+
+.event-details_1 p {
+    margin: 0;
+    margin-left: 150px;
+    text-align: center;
+}
+
+/*style gallery*/
+.gallery {
+    margin-top: 40px; /* Ajuster cet espace selon les besoins */
+    display: flex; /* Utilisation de flexbox pour disposer les images en ligne */
+}
+
+.gallery-text {
+    background-color: #f9f9f9; /* Couleur de fond */
+    padding: 20px; /* Espacement intérieur */
+}
+   
+
+.gallery-text h3 {
+    font-size: 18px; /* Taille de police */
+    color: #333; /* Couleur du texte */
+    line-height: 1.5; /* Hauteur de ligne */
+}
+
+
+.image {
+    margin-right: 10px; /* Espacement entre chaque image */
+}
+
+.image:last-child {
+    margin-right: 0; /* Supprime l'espacement à droite de la dernière image */
+}
+
+.image img {
+    width: 60%; /* Taille des images (ajustez selon vos besoins) */
+    height: auto; /* Hauteur automatique pour maintenir les proportions */
+}
+
+/*style astronomie*/
+.split-section {
+    display: flex;
+    justify-content: center; /* Centrer les éléments horizontalement */
+    align-items: center; /* Centrer les éléments verticalement */
+}
+
+.image-section {
+    flex: 1; /* Prendre la moitié de l'espace disponible */
+    padding: 20px; /* Espacement intérieur */
+}
+.image-section img {
+    width: 100%; /* Largeur de l'image */
+    height: auto; /* Hauteur automatique pour maintenir les proportions */
+    max-width: 400px; /* Largeur maximale de l'image */
+}
+
+
+.text-section {
+    flex: 1; /* Prendre la moitié de l'espace disponible */
+    padding: 20px; /* Espacement intérieur */
+}
+
+.text-section h2 {
+    font-size: 18px;
+}
+
+.text-section p {
+    font-size: 20px;
+}
+.split-section a {
+    text-decoration: none;
+}
+
+/*style section activités*/
+
+.activities-section {
+    padding: 50px 0;
+    background-color: #f9f9f9;
+}
+
+.activities-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.activity {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.activity h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.activity p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.activity-image img {
+    width: 100%;
+    height: 200px; /* Ajuster la taille de l'image selon vos besoins */
+    object-fit: cover;
+    border-radius: 10px 10px 0 0; /* Coins arrondis seulement en haut */
+}
+
+/*style forùulaire de contact*/
+
+.contact-section {
+    background-color: #f9f9f9;
+    padding: 50px 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: auto;
+}
+
+.contact-content {
+    display: flex;
+    align-items: center;
+}
+
+.contact-form {
+    flex: 1;
+    background: linear-gradient(to bottom right, #295fc4, hwb(95 0% 100%)); /* Vert dégradé par défaut */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: calc(100% - 20px); /* Calcul de la largeur en tenant compte du padding */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #fd7e14;
+}
+
+.contact-image img {
+    width: 500px;
+    height: 423px;
+     /* Largeur maximale de l'image */
+    border-radius: 10px;
+     /* Ajout de la marge pour séparer l'image du formulaire */
+}
+
+
+
+
+
