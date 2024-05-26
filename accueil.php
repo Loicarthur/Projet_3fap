@@ -53,17 +53,15 @@ $products = $stmt->fetchAll(PDO::FETCH_ASSOC);
                     $username = $user['username'];
                     // Afficher les liens des pages
                     echo '<a href="accueil.php">Accueil</a>';
-                    echo '<a href="article.php">Articles</a>';
-                    echo '<a href="activite.php">Activités</a>';
-                    echo '<a href="e_commerce/products.php">Produits</a>';
+                    echo '<a href="liste_activites.php">Activités</a>';
+                    echo '<a href="products.php">Produits</a>';
                     echo '<a href="posts/view_posts.php">Blog</a>';
                 }
             } else {
                 // Afficher les liens de connexion et d'inscription
                 echo '<a href="accueil.php">Accueil</a>';
-                echo '<a href="article.php">Articles</a>';
-                echo '<a href="activite.php">Activités</a>';
-                echo '<a href="e_commerce/products.php">Produits</a>';
+                echo '<a href="liste_activites.php">Activités</a>';
+                echo '<a href="products.php">Produits</a>';
                 echo '<a href="posts/view_posts.php">Blog</a>';
             }
             ?>
